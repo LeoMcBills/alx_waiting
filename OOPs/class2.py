@@ -53,3 +53,7 @@ print()
 droid3 = Robot("F1-D1")
 droid3.say_hi()
 Robot.how_many()
+
+print()
+droid2.die()
+Robot.how_many()
