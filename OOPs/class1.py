@@ -1,9 +1,11 @@
 class Person:
+
+    def __init__(self, name):
+        self.name = name
+
     def say_hi(self):
-        print('Hello, how are you?')
+        print(f"Hello there Mr. {self.name}")
 
 
-p = Person()
-print(p)
-print()
-p.say_hi()
+l = Person('Leo')
+l.say_hi()
