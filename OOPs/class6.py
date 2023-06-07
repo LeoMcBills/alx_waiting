@@ -1,9 +1,3 @@
-import cv2
-
-# write an application with kivy that uses scatter to move a blue dot around the screen
-
-import kivy
-kivy.require('1.9.0')
 import random
 from kivy.app import App
 from kivy.uix.scatter import Scatter
