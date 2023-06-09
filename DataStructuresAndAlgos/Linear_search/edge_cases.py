@@ -41,9 +41,13 @@ def use_case(case: str)->dict:
 						}
 		}
 	for key, value in cases.items():
-			print(key, "contains ", value)
-			print()
-
+		#	print(key, "contains ", value)
+		if key == case:
+			print(key, value)
+			break
+		else:
+			print("No test case of the sort was found")
+			break
 
 # print(use_case('case3'))
-use_case('case1')
+use_case('case_1')
