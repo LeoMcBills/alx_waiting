@@ -1,31 +1,49 @@
 #!/usr/bin/python3
 import json
 
-cases = {
-			'case1' : {
-						'cards' : [],
-						'choice': 3
-					},
+def use_case(case: str)->dict:
+	"""A dict of all possible testing edge cases
 
-			'case2' : {
-						'cards' : [1, 2, 3, 6, 6, 6, 7, 6],
-						'choice': 6
-					},
+	Parameter
+	----------
+	case: (str)
+		Enter the name of the case to test the algorithm with
 
-			'case3' : {
-						'cards' : [4, 6, 7, 3, 2],
-						'choice': 1
-					},
+	Returns
+	-------
+	A dictionary of the particular test edge case
+	"""
 
-			'case4' : {
-						'cards' : [0, 6, 9, 3],
-						'choice': 0
-					},
-
-			'case5' : {
-						'cards' : [4, 3, 2, 5, 4],
-						'choice': 4
-					}
+	cases = {
+				'case_1' : {
+							'cards' : [],
+							'choice': 3
+						},
+	
+				'case_2' : {
+							'cards' : [1, 2, 3, 6, 6, 6, 7, 6],
+							'choice': 6
+						},
+	
+				'case_3' : {
+							'cards' : [4, 6, 7, 3, 2],
+							'choice': 1
+						},
+	
+				'case_4' : {
+							'cards' : [0, 6, 9, 3],
+							'choice': 0
+						},
+	
+				'case_5' : {
+							'cards' : [4, 3, 2, 5, 4],
+							'choice': 4
+						}
 		}
+	for key, value in cases.items():
+			print(key, value)
+			print()
 
-print(json.dumps(cases, sort_keys=True, indent=4))
+
+# print(use_case('case3'))
+use_case('case1')
