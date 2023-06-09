@@ -41,7 +41,7 @@ def use_case(case: str)->dict:
 						}
 		}
 	for key, value in cases.items():
-			print(key, value)
+			print(key, "contains ", value)
 			print()
 
 
