@@ -9,3 +9,7 @@ print(multiply(3, 4))
 # divide
 divide = lambda c, d: c / d
 print(divide(12, 4))
+
+# subtract
+subtract = lambda e, f: e - f
+print(subtract(12, 4))
