@@ -7,7 +7,7 @@ def all_alpha():
     for i in range(len(alpha)):
         alpha_list.append(alpha[i])
 
-    word = ','.join(alpha_list)
+    word = ''.join(alpha_list)
     return word
 
 def all_alpha2():
@@ -17,7 +17,7 @@ def all_alpha2():
     for i in alpha:
         alpha_list.append(i)
 
-    word = ','.join(alpha_list)
+    word = ''.join(alpha_list)
     return word
 
 print(all_alpha())
