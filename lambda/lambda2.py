@@ -1,5 +1,7 @@
 # produce a list of all alphabetical order
 
+word = lambda listOfCharacters: ''.join(listOfCharacters)
+
 def all_alpha():
     import string
     alpha = string.ascii_lowercase
@@ -7,8 +9,7 @@ def all_alpha():
     for i in range(len(alpha)):
         alpha_list.append(alpha[i])
 
-    word = lambda: ''.join(alpha_list)
-    return word()
+    return word(alpha_list)
 
 
 """ personal summary
@@ -30,8 +31,7 @@ def all_alpha2():
     for i in alpha:
         alpha_list.append(i)
 
-    word = lambda: ''.join(alpha_list)
-    return word()
+    return word(alpha_list)
 
 print(all_alpha())
 print(all_alpha2())
