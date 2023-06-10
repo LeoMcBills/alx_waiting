@@ -35,3 +35,12 @@ def all_alpha2():
 
 print(all_alpha())
 print(all_alpha2())
+
+#a function to display numbers from 1 to 1000 in a table-like order
+def table():
+    for i in range(1, 1001):
+        print(i, end=' ')
+        if i % 10 == 0:
+            print()
+
+print(table())
