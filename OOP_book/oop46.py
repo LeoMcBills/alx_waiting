@@ -2,7 +2,7 @@
 
 class Point:
     def reset(self):
-        self.x = 0
+        self.x = 1
         self.y = 0
 
 p = Point()
