@@ -1,6 +1,6 @@
 from kivy.app import App
 from kivy.lang import Builder
-
+from kivy.uix.floatlayout import FloatLayout
 
 root = Builder.load_string('''
 FloatLayout:
