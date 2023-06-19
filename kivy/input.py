@@ -8,7 +8,7 @@ class LoginScreen(GridLayout):
     
     def __init__(self, **kwargs):
         super(LoginScreen, self).__init__(**kwargs)
-        self.cols = 2
+        self.cols = 4
         self.add_widget(Label(text='User Name'))
         self.username = TextInput(multiline=False)
         self.add_widget(self.username)
