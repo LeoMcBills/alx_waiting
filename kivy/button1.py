@@ -8,7 +8,8 @@ class RootWidget(BoxLayout):
     
     def __init__(self, **kwargs):
         super(RootWidget, self).__init__(**kwargs)
-        self.add_widget(Button(text='button1'))
+        but = Button(text='button1')
+        self.add_widget(but)
         cb = CustomBtn()
         cb.bind(pressed=self.btn_pressed)
         self.add_widget(cb)
