@@ -25,7 +25,7 @@ class MainApp(App):
         root.bind(size=self._update_rect, pos=self._update_rect)
 
         with root.canvas.before:
-            Color(1, 1, 0, 1) # green; colors range from 0-1 not 0-255
+            Color(1, 1, 1, 1) # green; colors range from 0-1 not 0-255
             self.rect = Rectangle(size=root.size, pos=root.pos)
         return root
 
