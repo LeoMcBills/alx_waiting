@@ -22,3 +22,25 @@ ScatterLayout:
 
 StackLayout:
     Widgets are stacked in a lr-tb(left to right then top to bottom) or tb-lr order.
+
+
+PACKAGING
+
+Create a package for Windows
+    - Requirements
+    - PyInstaller default hook
+
+Creating packages for macOS
+    - Using Buildozer
+    - Using PyInstaller and Homebrew
+
+Create a package for Android
+    - Packaging with python-for-android
+    - Packaging your application for the kivy launcher
+
+Create a package for iOS
+    - Compile the distribution
+    - Create an Xcode project
+    - CUstomize the Xcode project
+    - known issues
+    - FAQ
