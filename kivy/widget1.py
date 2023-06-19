@@ -14,7 +14,7 @@ class RootWidget(FloatLayout):
         self.add_widget(
             Button(
                 text="Hello World",
-                size_hint=(1, .5),
+                size_hint=(.5, .5),
                 pos_hint={'center_x':.5, 'center_y':.5}))
 
 
@@ -25,7 +25,7 @@ class MainApp(App):
         root.bind(size=self._update_rect, pos=self._update_rect)
 
         with root.canvas.before:
-            Color(1, 1, 1, 1) # green; colors range from 0-1 not 0-255
+            Color(0, 1, 1, 1) # green; colors range from 0-1 not 0-255
             self.rect = Rectangle(size=root.size, pos=root.pos)
         return root
 
