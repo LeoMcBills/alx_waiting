@@ -11,10 +11,10 @@ FloatLayout:
             # self here refers to the widget i.e FloatLayout
             pos: self.pos
             size: self.size
-        Button:
-            text: 'Hello World!'
-            size_hint: .5, .5
-            pos_hint: {'center_x':.5, 'center_y':.5}
+    Button:
+        text: 'Hello World!'
+        size_hint: .5, .5
+        pos_hint: {'center_x':.5, 'center_y':.5}
 ''')
 
 class MainApp(App):
