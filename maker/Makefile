@@ -1,2 +1,2 @@
-all: _add.c _divide.c _subtract.c main.c main.h
-    gcc _add.c _divide.c _subtract.c main.c main.h -o all
+compile : pid.c main.h
+    gcc pid.c main.h -o 

@@ -2,9 +2,8 @@
 #define MAIN_H
 
 #include <stdio.h>
+#include <unistd.h>
 
-void _add(int a, int b);
-void _subtract(int a, int b);
-void _divide(int a, int b);
+pid_t getit(void);
 
 #endif
