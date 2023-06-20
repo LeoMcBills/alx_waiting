@@ -5,9 +5,6 @@ i = 0
 for person in rich.items():
    # print(person)
     listThem = []
-    listThem[i] += person
-    i += 1
-    if i == 2:
-        break
+    listThem += person
 
 print(listThem)
