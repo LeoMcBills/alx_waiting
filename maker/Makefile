@@ -1,2 +1,2 @@
-compile : pid.c main.h
-    gcc pid.c main.h -o 
+compile : pid.c main.h main.c
+	gcc pid.c main.h main.c -o getit
