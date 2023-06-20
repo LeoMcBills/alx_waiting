@@ -4,6 +4,6 @@ pid_t getit(void)
 {
     pid_t childpid;
 
-    childpid = getpid()
-    return childpid
+    childpid = getpid();
+    return childpid;
 }
