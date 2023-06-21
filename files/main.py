@@ -2,9 +2,6 @@
 
 script = open("peakyBlinder")
 
-line = script.readline()
-line1 = script.readline()
-line3 = script.readline()
+lines = script.readlines()
 
-print(line)
-print(line1)
+print(lines)
