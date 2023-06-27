@@ -8,3 +8,14 @@ def my_function(a, b):
     'aaa'
     """
     return a*b
+
+
+def reset(variable):
+    """
+    >>> battery = 78
+    >>> reset(battery)
+    >>> battery
+    0
+    """
+    variable = 0
+    return variable
