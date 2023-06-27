@@ -1,4 +1,4 @@
 import turtle
 
 turtle.circle(50, 180)
-turtle.getscreen()._root.mainloop()
+turtle.bye() # close window and go away
