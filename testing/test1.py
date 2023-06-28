@@ -13,7 +13,7 @@ def my_function(a, b):
 def reset(variable):
     """
     >>> battery = 78
-    >>> batter = reset(battery)
+    >>> battery = reset(battery)
     >>> battery
     0
     """
