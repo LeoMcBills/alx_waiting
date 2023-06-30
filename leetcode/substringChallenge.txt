@@ -1,0 +1,3 @@
+abcabcab = abc = 3
+bbbbb = b = 1
+pwwkewh = wke = 3
