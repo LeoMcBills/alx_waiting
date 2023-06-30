@@ -1,11 +1,8 @@
-s = 'b'
-
+s = 'pwwkew'
+a = [*s]
 substr = []
+generalList = []
 
-for letter in s:
-    if letter in substr:
-        break
-    substr.append(letter)
-
-print(substr)
-print(len(substr))
+num = len(a)
+print(num)
+print(generalList)
