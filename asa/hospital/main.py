@@ -12,8 +12,8 @@ class Post(BaseModel):
     title : str
     #id : int
     diagnosis : str
-    #treated : bool = True
-    #time : int
+    treated : bool = True
+    time : int
 
 
 
