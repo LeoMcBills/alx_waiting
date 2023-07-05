@@ -17,5 +17,5 @@ try:
     x = 12 / 0
     print("Wait how did you pass the exceptional checks")
 
-except:
+except ZeroDivisionError:
     print("Dude! We don't divide numbers by zero anymore")
