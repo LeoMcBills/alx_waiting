@@ -9,4 +9,6 @@ struct node {
 	struct node *link;
 };
 
+void addNode(struct node *head, struct node *next, int data);
+
 #endif
