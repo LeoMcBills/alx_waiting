@@ -2,8 +2,6 @@
 
 int main(void)
 {
-   printf("Hello Leo the greatest.\n");
-   
    struct node *head = NULL;
 
    head = malloc(sizeof(struct node));
