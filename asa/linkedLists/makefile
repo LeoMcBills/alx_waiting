@@ -1,2 +1,2 @@
-simba : main.c main.h
-	gcc main.c main.h -o lion
+simba : main.c main.h addNode.c
+	gcc main.c main.h addNode.c -o lion
