@@ -1,0 +1,62 @@
+<StartScreen>:
+    cols: 1
+
+    Label:
+        text: "Start Screen"
+
+    Button:
+        text: "Login"
+        on_release: app.root.current = "login"
+
+    Button:
+        text: "Register"
+        on_release: app.root.current = "register"
+
+<LoginScreen>:
+    Label:
+        text: "Login Screen"
+
+<RegisterScreen>:
+    Label:
+        text: "Register Screen"
+
+<MainScreen>:
+    Label:
+        text: "Main Screen"
+
+<ScanScreen>:
+    Label:
+        text: "Scan Screen"
+
+<RegisterPatientScreen>:
+    Label:
+        text: "Register Patient Screen"
+
+<PatientScreen>:
+    Label:
+        text: "Patient Screen"
+
+<TrackerApp>:
+    ScreenManager:
+        id: screen_manager
+
+        StartScreen:
+            name: "start"
+
+        LoginScreen:
+            name: "login"
+
+        RegisterScreen:
+            name: "register"
+
+        MainScreen:
+            name: "main"
+
+        ScanScreen:
+            name: "scan"
+
+        RegisterPatientScreen:
+            name: "register_patient"
+
+        PatientScreen:
+            name: "patient"
