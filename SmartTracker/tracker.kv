@@ -1,16 +1,24 @@
-<StartScreen>:
+StartScreen:
+
+<StartScreen@GridLayout>:
     cols: 1
 
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'images/test.jpg'
     Label:
-        text: "Start Screen"
-
-    Button:
-        text: "Login"
-        on_release: app.root.current = "login"
+        text: "Smart vTracker"
 
     Button:
         text: "Register"
-        on_release: app.root.current = "register"
+        size: 200, 50
+        background_color: 0, 1, 0.5, 1
+        background_normal: 'images/test.jpg'
+    
+    Label:
+        text: "Don't have an account? Register."
 
 <LoginScreen>:
     Label:
