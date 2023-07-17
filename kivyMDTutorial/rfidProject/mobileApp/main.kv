@@ -1,0 +1,32 @@
+MDScreen:
+    name: "main"
+  
+    MDFloatLayout:
+        md_bg_color: app.get_color('C4C4C4')
+        
+        Image:
+            source: "images/splashbpg.png"
+            size_hint: .8, .8
+            pos_hint: {"center_x": .5, "center_y": .65}
+        MDFillRoundFlatButton:
+            text: "Sign In"
+            size_hint: .8, .065
+            pos_hint: {"center_x": .5, "center_y": .18}
+            md_bg_color: app.get_color('06560A')
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "signin"
+    MDLabel:
+        text: "Don't have an account?"
+        font_size: "11sp"
+        pos_hint: {"center_x": .65, "center_y": .1}
+        color: rgba(68, 78, 132, 255)
+    MDTextButton:
+        text: "Sign up"
+        font_size: "11sp"
+        pos_hint: {"center_x": .58, "center_y": .1}
+        color: app.get_color('06560A')
+        on_release:
+            root.manager.transition.direction = "left"
+            root.manager.current = "signup"
+                

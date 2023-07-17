@@ -1,0 +1,101 @@
+MDScreen:
+    name: "signup"
+
+    MDFloatLayout:
+        md_bg_color: app.get_color('C4C4C4')
+
+        Image:
+            source: "images/slogo.png"
+            size_hint: .3, .3
+            pos_hint: {"center_x": .5, "center_y": .9}
+
+        Card:
+            md_bg_color: 1, 1, 1, 1
+            elevation: 1
+            size_hint: .85, .6
+            pos_hint: {"center_x": .5, "center_y": .5}
+            radius: [10]
+
+            MDFillRoundFlatButton:
+                text: "Continue with Google"
+                size_hint: .8, .08
+                pos_hint: {"center_x": .5, "center_y": .8}
+                md_bg_color: app.get_color('06560A')
+                on_release:
+                    root.manager.transition.direction = "left"
+
+            MDLabel:
+                text: "OR"
+                color: rgba(52, 0, 231, 255)
+                pos_hint: {"center_x": .5, "center_y": .7}
+                font_size: "13sp"
+                halign: "center"
+
+            MDFloatLayout:
+                md_bg_color: rgba(178, 178, 178, 255)
+                size_hint: .3, .002
+                pos_hint: {"center_x": .3, "center_y": .698}
+            MDFloatLayout:
+                md_bg_color: rgba(178, 178, 178, 255)
+                size_hint: .3, .002
+                pos_hint: {"center_x": .7, "center_y": .698}
+
+            MDFloatLayout:
+                size_hint: .85, .06
+                pos_hint: {"center_x": .5, "center_y": .52}
+                
+                MDTextField:
+                    hint_text: "email"
+                    mode: "round"
+                    max_text_length: 15
+                    helper_text: "email"
+                    size_hint: 1, None
+                    pos_hint: {"center_x": .5, "center_y": 2}
+                    height: self.minimum_height
+                    multiline: False
+                    cursor_color: 57/255, 66/255, 143/255, 1
+                    cursor_width: "2sp"
+                    foreground_color: 57/255, 66/255, 143/255, 1
+                    background_color: 0, 0, 0, 0
+                    padding: 15
+                    font_size: "18sp"
+            MDFloatLayout:
+                size_hint: .85, .06
+                pos_hint: {"center_x": .5, "center_y": .41}
+
+                MDTextField:
+                    hint_text: "password"
+                    mode: "round"
+                    max_text_length: 15
+                    helper_text: "minimum 8 digits"
+                    size_hint: 1, None
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    height: self.minimum_height
+                    multiline: False
+                    password: True
+                    cursor_color: 57/255, 66/255, 143/255, 1
+                    cursor_width: "2sp"
+                    foreground_color: 57/255, 66/255, 143/255, 1
+                    background_color: 0, 0, 0, 0
+                    padding: 15
+                    font_size: "18sp"
+            MDFillRoundFlatButton:
+                text: "Create account"
+                size_hint: .8, .08
+                pos_hint: {"center_x": .5, "center_y": .25}
+                md_bg_color: app.get_color('06560A')
+                on_release:
+                    root.manager.transition.direction = "left"
+        MDLabel:
+            text: "Already having an account?"
+            font_size: "11sp"
+            pos_hint: {"center_x": .65, "center_y": .1}
+            color: rgba(68, 78, 132, 255)
+        MDTextButton:
+            text: "Sign in"
+            font_size: "11sp"
+            pos_hint: {"center_x": .66, "center_y": .1}
+            color: app.get_color('06560A')
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "signin"

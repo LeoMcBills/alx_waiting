@@ -1,0 +1,113 @@
+MDScreen:
+    name: "signin"
+
+    MDFloatLayout:
+        md_bg_color: app.get_color('C4C4C4')
+
+        Image:
+            source: "images/slogo.png"
+            size_hint: .3, .3
+            pos_hint: {"center_x": .5, "center_y": .9}
+
+        Card:
+            md_bg_color: 1, 1, 1, 1
+            elevation: 1
+            size_hint: .85, .6
+            pos_hint: {"center_x": .5, "center_y": .5}
+            radius: [10]
+
+            MDFloatLayout:
+                size_hint: .85, .06
+                pos_hint: {"center_x": .5, "center_y": .72}
+
+                MDTextField:
+                    hint_text: "email"
+                    mode: "round"
+                    max_text_length: 15
+                    helper_text: "email"
+                    size_hint: 1, None
+                    pos_hint: {"center_x": .5, "center_y": 1}
+                    height: self.minimum_height
+                    multiline: False
+                    password: True
+                    cursor_color: 57/255, 66/255, 143/255, 1
+                    cursor_width: "2sp"
+                    foreground_color: 57/255, 66/255, 143/255, 1
+                    background_color: 0, 0, 0, 0
+                    padding: 15
+                    font_size: "18sp"
+            MDFloatLayout:
+                size_hint: .85, .06
+                pos_hint: {"center_x": .5, "center_y": .51}
+                
+                MDTextField:
+                    hint_text: "password"
+                    mode: "round"
+                    max_text_length: 15
+                    helper_text: "atleast 8 characters"
+                    size_hint: 1, None
+                    pos_hint: {"center_x": .5, "center_y": 1}
+                    height: self.minimum_height
+                    multiline: False
+                    password: True
+                    cursor_color: 57/255, 66/255, 143/255, 1
+                    cursor_width: "2sp"
+                    foreground_color: 57/255, 66/255, 143/255, 1
+                    background_color: 0, 0, 0, 0
+                    padding: 15
+                    font_size: "18sp"
+            MDTextButton:
+                text: "Forgot Password?"
+                pos_hint: {"center_x": .3, "center_y": .4}
+                color: rgba(68, 78, 132, 255)
+                font_size: "12sp"
+               
+            MDFillRoundFlatButton:
+                text: "Login"
+                size_hint: .8, .08
+                pos_hint: {"center_x": .5, "center_y": .3}
+                md_bg_color: app.get_color('06560A')
+                on_release:
+                    root.manager.transition.direction = "left"
+                    root.manager.current = "home"
+            
+            MDLabel:
+                text: "OR"
+                color: rgba(52, 0, 231, 255)
+                pos_hint: {"center_x": .5, "center_y": .22}
+                font_size: "13sp"
+                halign: "center"
+
+            MDFloatLayout:
+                md_bg_color: rgba(178, 178, 178, 255)
+                size_hint: .3, .002
+                pos_hint: {"center_x": .3, "center_y": .218}
+            MDFloatLayout:
+                md_bg_color: rgba(178, 178, 178, 255)
+                size_hint: .3, .002
+                pos_hint: {"center_x": .7, "center_y": .218}
+
+            MDGridLayout:
+                cols: 3
+                size_hint: .48, .07
+                pos_hint: {"center_x": .5, "center_y": .1}
+                Image:
+                    source: "images/g.png"
+                Image:
+                    source: "images/fac.png"
+                Image:
+                    source: "images/c.png"
+
+        MDLabel:
+            text: "Don't have an account?"
+            font_size: "11sp"
+            pos_hint: {"center_x": .60, "center_y": .15}
+            color: rgba(68, 78, 132, 255)
+        MDTextButton:
+            text: "Sign up"
+            font_size: "11sp"
+            pos_hint: {"center_x": .55, "center_y": .15}
+            color: app.get_color('06560A')
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "signup"
