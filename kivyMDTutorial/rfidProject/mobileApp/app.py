@@ -7,6 +7,9 @@ from kivy.core.window import Window
 from kivymd.uix.behaviors import FakeRectangularElevationBehavior
 from kivy.utils import get_color_from_hex
 from kivymd.uix.floatlayout import MDFloatLayout
+from kivymd.uix.card import MDCard
+
+
 Window.size = (310, 580)
 
 
@@ -21,12 +24,13 @@ class Slope(MDApp):
         screen_manager.add_widget(Builder.load_file("signup.kv"))
         screen_manager.add_widget(Builder.load_file("signin.kv"))
         screen_manager.add_widget(Builder.load_file("home.kv"))
+        screen_manager.add_widget(Builder.load_file("scan.kv"))
+        screen_manager.add_widget(Builder.load_file("register.kv"))
         return screen_manager
     
     def get_color(self, hex_code):
         rgb_code = get_color_from_hex(hex_code)
-        return rgb_code
-
+        return rgb_code    
 
 if __name__ == "__main__":
     Slope().run()

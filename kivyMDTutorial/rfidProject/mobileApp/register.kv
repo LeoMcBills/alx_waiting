@@ -1,0 +1,64 @@
+MDScreen:
+    name: "register"
+
+    MDFloatLayout:
+        md_bg_color: app.get_color('C4C4C4')
+
+        MDTextField:
+            hint_text: "password"
+            mode: "round"
+            max_text_length: 20
+            helper_text: "minimum 8 digits"
+            size_hint: 1, None
+            pos_hint: {"center_x": .5, "center_y": .7}
+            height: self.minimum_height
+            multiline: False
+            password: True
+            cursor_color: 57/255, 66/255, 143/255, 1
+            cursor_width: "2sp"
+            foreground_color: 57/255, 66/255, 143/255, 1
+            background_color: 0, 0, 0, 0
+            padding: 15
+            font_size: "18sp"
+
+        MDTextField:
+            hint_text: "password"
+            mode: "round"
+            max_text_length: 20
+            helper_text: "minimum 8 digits"
+            size_hint: 1, None
+            pos_hint: {"center_x": .5, "center_y": .7}
+            height: self.minimum_height
+            multiline: False
+            password: True
+            cursor_color: 57/255, 66/255, 143/255, 1
+            cursor_width: "2sp"
+            foreground_color: 57/255, 66/255, 143/255, 1
+            background_color: 0, 0, 0, 0
+            padding: 15
+            font_size: "18sp"
+
+        MDTextField:
+            hint_text: "password"
+            mode: "round"
+            max_text_length: 20
+            helper_text: "minimum 8 digits"
+            size_hint: 1, None
+            pos_hint: {"center_x": .5, "center_y": .7}
+            height: self.minimum_height
+            multiline: False
+            password: True
+            cursor_color: 57/255, 66/255, 143/255, 1
+            cursor_width: "2sp"
+            foreground_color: 57/255, 66/255, 143/255, 1
+            background_color: 0, 0, 0, 0
+            padding: 15
+            font_size: "18sp"
+
+        MDFillRoundFlatButton:
+            text: "Create account"
+            size_hint: .8, .08
+            pos_hint: {"center_x": .5, "center_y": .25}
+            md_bg_color: app.get_color('06560A')
+            on_release:
+                root.manager.transition.direction = "left"
