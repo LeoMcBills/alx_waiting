@@ -9,6 +9,16 @@ MDScreen:
             size_hint: .3, .3
             pos_hint: {"center_x": .5, "center_y": .9}
 
+        MDTextButton:
+            text: "splash"
+            font_size: "16sp"
+            pos_hint: {"center_x": .1, "center_y": .96}
+            color: app.get_color('06560A')
+            bold: True
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main"
+
         Card:
             md_bg_color: 1, 1, 1, 1
             elevation: 1

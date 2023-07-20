@@ -1,5 +1,14 @@
 MDScreen:
     name: "scan"
-
+  
     MDFloatLayout:
         md_bg_color: app.get_color('C4C4C4')
+        
+        MDFillRoundFlatButton:
+            text: "Home"
+            size_hint: .8, .08
+            pos_hint: {"center_x": .5, "center_y": .25}
+            md_bg_color: app.get_color('06560A')
+            on_release:
+                root.manager.transition.direction = "up"
+                root.manager.current = "home"

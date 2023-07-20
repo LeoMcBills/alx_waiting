@@ -12,7 +12,6 @@ from kivymd.uix.card import MDCard
 
 Window.size = (310, 580)
 
-
 class Card(FakeRectangularElevationBehavior, MDFloatLayout):
     pass
 
