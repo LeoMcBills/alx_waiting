@@ -1,0 +1,94 @@
+MDScreen:
+    name: "menu"
+  
+    MDBoxLayout:
+        md_bg_color: "grey"
+        orientation: "vertical"
+
+        MDBoxLayout:
+            size_hint_y: .25
+            padding: dp(25)
+            MDBoxLayout:
+                orientation: "vertical"
+                MDLabel:
+                    text: "Choose action"
+                    font_style: "H5"
+                    bold: True
+                MDBoxLayout:
+                    adaptive_size:True
+                    spacing: dp(10)
+                    MDLabel:
+                        text: "Trust God"
+                        text_size: None, None
+                        adaptive_width: True
+                    MDIcon:
+                        icon: 'chevron-down'
+            MDIconButton:
+                icon: "email"
+        MDGridLayout:
+            size_hint_y: .75
+            cols:2
+            padding: [dp(15), dp(15), dp(15), dp(15)]
+            spacing: dp(15)
+            ElementCard:
+                image: "image/offline.png"
+                text: "Offline"
+                on_release:
+                    root.manager.transition.direction = "up"
+                    root.manager.current = "home"
+            ElementCard:
+                image: "image/login.png"
+                text: "Sign In"
+                on_release:
+                    root.manager.transition.direction = "up"
+                    root.manager.current = "signin"
+            ElementCard:
+                image: "image/info.png"
+                text: "About"
+                on_release:
+                    root.manager.transition.direction = "up"
+                    root.manager.current = "register"
+            ElementCard:
+                image: "image/repo.png"
+                text: "Repository"
+                items_count: "*0 registered"
+                on_release:
+                    root.manager.transition.direction = "up"
+                    root.manager.current = "register"
+            ElementCard:
+                image: "image/faqs.png"
+                text: "FAQs"
+                on_release:
+                    root.manager.transition.direction = "up"
+                    root.manager.current = "register"
+            ElementCard:
+                image: "image/settings.png"
+                text: "Settings"
+                on_release:
+                    root.manager.transition.direction = "up"
+                    root.manager.current = "register"
+
+<ElementCard@MDCard>:
+    md_bg_color: app.get_color('C4C4C4')
+    size_hint_y: None
+    padding: dp(5)
+    radius: dp(25)
+    ripple_behavior: True
+    image: ""
+    text: ""
+    items_count: ""
+    orientation: "vertical"
+    Image:
+        source: root.image
+    MDBoxLayout:
+        orientation: "vertical"
+        MDLabel:
+            text: root.text
+            font_style: "H6"
+            halign: "center"
+            bold: False
+        MDLabel:
+            text: root.items_count
+            font_style: "Caption"
+            halign: "center"
+            color: "green"

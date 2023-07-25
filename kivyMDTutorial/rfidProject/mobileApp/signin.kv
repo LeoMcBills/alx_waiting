@@ -5,19 +5,17 @@ MDScreen:
         md_bg_color: app.get_color('C4C4C4')
 
         Image:
-            source: "images/slogo.png"
+            source: "slogo.png"
             size_hint: .3, .3
             pos_hint: {"center_x": .5, "center_y": .9}
 
-        MDTextButton:
-            text: "splash"
-            font_size: "16sp"
-            pos_hint: {"center_x": .1, "center_y": .96}
-            color: app.get_color('06560A')
-            bold: True
+        MDIconButton:
+            icon: "menu"
+            pos_hint: {"center_x": .08, "center_y": .95}
+            color: "darkgreen"
             on_release:
-                root.manager.transition.direction = "right"
-                root.manager.current = "main"
+                root.manager.transition.direction = "left"
+                root.manager.current = "menu"
 
         Card:
             md_bg_color: 1, 1, 1, 1
@@ -102,11 +100,11 @@ MDScreen:
                 size_hint: .48, .07
                 pos_hint: {"center_x": .5, "center_y": .1}
                 Image:
-                    source: "images/g.png"
+                    source: "g.png"
                 Image:
-                    source: "images/fac.png"
+                    source: "fac.png"
                 Image:
-                    source: "images/c.png"
+                    source: "c.png"
 
         MDLabel:
             text: "Don't have an account?"

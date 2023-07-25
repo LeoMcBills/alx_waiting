@@ -5,17 +5,17 @@ MDScreen:
         md_bg_color: app.get_color('C4C4C4')
         
         Image:
-            source: "images/splashbpg.png"
+            source: "splashbpg.png"
             size_hint: .8, .8
             pos_hint: {"center_x": .5, "center_y": .65}
         MDFillRoundFlatButton:
-            text: "Sign In"
+            text: "Menu"
             size_hint: .8, .065
             pos_hint: {"center_x": .5, "center_y": .18}
             md_bg_color: app.get_color('06560A')
             on_release:
                 root.manager.transition.direction = "left"
-                root.manager.current = "signin"
+                root.manager.current = "menu"
     MDLabel:
         text: "Don't have an account?"
         font_size: "11sp"
