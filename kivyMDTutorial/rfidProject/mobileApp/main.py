@@ -52,8 +52,26 @@ class Slope(MDApp):
         self.dialog.open()
 
     def discard_draft(self, instance):
-        # Add your code to handle the discard action here (if needed)
         self.dialog.dismiss()
+
+    def show_another_dialog(self):
+        if self.dialog:  # If there's already a dialog open, you may want to handle this differently
+            self.dialog = MDDialog(
+                text="No RFID Printer detected.",
+                buttons=[
+                    MDFlatButton(
+                        text="Cancel",
+                        theme_text_color="Custom",
+                        text_color=self.theme_cls.primary_color,
+                        on_release=self.close_dialog
+                    ),
+                ],
+            )
+        self.dialog.open()
+
+    def close_dialog(self, instance):
+        self.dialog.dismiss()
+
 
 if __name__ == "__main__":
     Slope().run()

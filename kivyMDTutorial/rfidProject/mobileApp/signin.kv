@@ -77,6 +77,7 @@ MDScreen:
                 md_bg_color: app.get_color('06560A')
                 on_release:
                     root.manager.transition.direction = "left"
+                    app.show_alert_dialog()
             
             MDLabel:
                 text: "OR"
