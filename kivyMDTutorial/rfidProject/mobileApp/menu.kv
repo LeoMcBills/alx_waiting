@@ -18,13 +18,16 @@ MDScreen:
                     adaptive_size:True
                     spacing: dp(10)
                     MDLabel:
-                        text: "Trust God"
+                        text: "Main menu"
                         text_size: None, None
                         adaptive_width: True
                     MDIcon:
                         icon: 'chevron-down'
             MDIconButton:
-                icon: "email"
+                icon: "home"
+                on_release:
+                    root.manager.transition.direction = "down"
+                    root.manager.current = "main"
         MDGridLayout:
             size_hint_y: .75
             cols:2
@@ -47,26 +50,23 @@ MDScreen:
                 text: "About"
                 on_release:
                     root.manager.transition.direction = "up"
-                    root.manager.current = "register"
             ElementCard:
                 image: "image/repo.png"
                 text: "Repository"
                 items_count: "*0 registered"
                 on_release:
                     root.manager.transition.direction = "up"
-                    root.manager.current = "register"
+                    root.manager.current = "repo"
             ElementCard:
                 image: "image/faqs.png"
                 text: "FAQs"
                 on_release:
                     root.manager.transition.direction = "up"
-                    root.manager.current = "register"
             ElementCard:
                 image: "image/settings.png"
                 text: "Settings"
                 on_release:
                     root.manager.transition.direction = "up"
-                    root.manager.current = "register"
 
 <ElementCard@MDCard>:
     md_bg_color: app.get_color('C4C4C4')

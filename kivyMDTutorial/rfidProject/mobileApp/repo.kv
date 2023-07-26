@@ -1,0 +1,20 @@
+MDScreen:
+    name: "repo"
+
+    MDFloatLayout:
+        md_bg_color: app.get_color('C4C4C4')
+
+        MDLabel:
+            text: "No pending unapproved registrations."
+            font_size: "16sp"
+            pos_hint: {"center_x": .57, "center_y": .59}
+        MDRaisedButton:
+            text: "HOME"
+            bold: True
+            font_size: "18sp"
+            size_hint: .65, .08
+            pos_hint: {"center_x": .5, "center_y": .2}
+            md_bg_color: app.get_color('06560A')
+            on_release:
+                root.manager.transition.direction = "down"
+                root.manager.current = "menu"

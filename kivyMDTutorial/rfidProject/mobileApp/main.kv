@@ -27,4 +27,5 @@ MDScreen:
         pos_hint: {"center_x": .58, "center_y": .1}
         color: app.get_color('06560A')
         on_release:
-            root.manager.transition.direction = "left"
+            root.manager.transition.direction = "up"
+            root.manager.current = "signup"

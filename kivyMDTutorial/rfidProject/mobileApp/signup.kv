@@ -4,8 +4,21 @@ MDScreen:
     MDFloatLayout:
         md_bg_color: app.get_color('C4C4C4')
 
+        # MDFlatButton:
+        #     text: "No API configured yet."
+        #     pos_hint: {'center_x': .5, 'center_y': .5}
+        #     on_release: app.show_alert_dialog()
+
+        MDIconButton:
+            icon: "menu"
+            pos_hint: {"center_x": .08, "center_y": .95}
+            color: "darkgreen"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "menu"
+
         Image:
-            source: "images/slogo.png"
+            source: "slogo.png"
             size_hint: .3, .3
             pos_hint: {"center_x": .5, "center_y": .9}
 
@@ -86,6 +99,7 @@ MDScreen:
                 md_bg_color: app.get_color('06560A')
                 on_release:
                     root.manager.transition.direction = "left"
+                    app.show_alert_dialog()
         MDLabel:
             text: "Already having an account?"
             font_size: "11sp"
@@ -99,3 +113,5 @@ MDScreen:
             on_release:
                 root.manager.transition.direction = "left"
                 root.manager.current = "signin"
+
+

@@ -3,3 +3,69 @@ MDScreen:
 
     MDFloatLayout:
         md_bg_color: app.get_color('C4C4C4')
+
+        MDIconButton:
+            icon: "menu"
+            pos_hint: {"center_x": .9, "center_y": .95}
+            color: "darkgreen"
+            on_release:
+                root.manager.transition.direction = "down"
+                root.manager.current = "menu"
+
+        Card:
+            md_bg_color: 1, 1, 1, 1
+            elevation: 1
+            size_hint: .9, .7
+            pos_hint: {"center_x": .5, "center_y": .53}
+            radius: [10]
+            md_bg_color: app.get_color('B5E1DF')
+
+            MDHeroFrom:
+                id: hero_kivymd
+                tag: "kivymd"
+                size_hint: None, None
+                size: "180dp", "180dp"
+                pos_hint: {"top": .98}
+                x: 60
+
+                FitImage:
+                    source: "noProfile.png"
+                    size_hint: None, None
+                    size: hero_kivymd.size
+
+            MDLabel:
+                text: "Name:    ---"
+                font_size: "15sp"
+                pos_hint: {"center_x": .55, "center_y": .5}
+            MDLabel:
+                text: "Vaccine taken:   ---"
+                font_size: "15sp"
+                pos_hint: {"center_x": .55, "center_y": .42}
+            MDLabel:
+                text: "Date for jab:    ---"
+                font_size: "15sp"
+                pos_hint: {"center_x": .55, "center_y": .34}
+            MDLabel:
+                text: "Hospital:    ---"
+                font_size: "15sp"
+                pos_hint: {"center_x": .55, "center_y": .26}
+            MDLabel:
+                text: "Dosage:  ---"
+                font_size: "15sp"
+                pos_hint: {"center_x": .55, "center_y": .18}
+            MDLabel:
+                text: "Sex:    ---"
+                font_size: "15sp"
+                pos_hint: {"center_x": .55, "center_y": .1}
+
+
+        MDRaisedButton:
+            text: "CLOSE"
+            bold: True
+            font_size: "20sp"
+            size_hint: .65, .08
+            pos_hint: {"center_x": .5, "center_y": .1}
+            md_bg_color: app.get_color('06560A')
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "home"
