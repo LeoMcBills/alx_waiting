@@ -1,3 +1,5 @@
+#:import Snackbar kivymd.uix.snackbar.Snackbar
+
 MDScreen:
     name: "menu"
   
@@ -34,39 +36,42 @@ MDScreen:
             padding: [dp(15), dp(15), dp(15), dp(15)]
             spacing: dp(15)
             ElementCard:
-                image: "image/offline.png"
+                image: "offline.png"
                 text: "Offline"
                 on_release:
                     root.manager.transition.direction = "up"
                     root.manager.current = "home"
             ElementCard:
-                image: "image/login.png"
+                image: "login.png"
                 text: "Sign In"
                 on_release:
                     root.manager.transition.direction = "up"
                     root.manager.current = "signin"
             ElementCard:
-                image: "image/info.png"
+                image: "info.png"
                 text: "About"
                 on_release:
                     root.manager.transition.direction = "up"
+                    app.show_snackbar()
             ElementCard:
-                image: "image/repo.png"
+                image: "repo.png"
                 text: "Repository"
                 items_count: "*0 registered"
                 on_release:
                     root.manager.transition.direction = "up"
                     root.manager.current = "repo"
             ElementCard:
-                image: "image/faqs.png"
+                image: "faqs.png"
                 text: "FAQs"
                 on_release:
                     root.manager.transition.direction = "up"
+                    app.show_snackbar()
             ElementCard:
-                image: "image/settings.png"
+                image: "settings.png"
                 text: "Settings"
                 on_release:
                     root.manager.transition.direction = "up"
+                    app.show_snackbar()
 
 <ElementCard@MDCard>:
     md_bg_color: app.get_color('C4C4C4')
