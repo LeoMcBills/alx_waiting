@@ -12,6 +12,11 @@ from kivy.clock import Clock
 from kivy.metrics import dp
 from pyfirmata import Arduino, util
 from kivymd.uix.screen import MDScreen
+from kivymd.uix.label import MDLabel
+from kivymd.uix.button import MDTextButton
+from kivymd.uix.spinner import MDSpinner
+from kivy.uix.image import Image
+
 
 Window.size = (310, 580)
 
@@ -19,9 +24,59 @@ class Card(FakeRectangularElevationBehavior, MDFloatLayout):
     pass
 
 class ScanPage(MDScreen):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        # Add the UI elements and other features here using Kivy language
+        self.md_bg_color = get_color_from_hex('181818')
+
+        self.add_widget(MDTextButton(
+            text="X",
+            theme_text_color="Custom",  # Set the text color using a custom value
+            text_color=get_color_from_hex('ADD8E6'),  # Set the custom color "lightblue"
+            font_size="40sp",  # Set the font size
+            pos_hint={"center_x": .08, "center_y": .95},
+            on_release=self.on_back_button_press
+        ))
+        self.add_widget(Image(
+            source="rfidS.png",
+            size_hint=(0.5, 0.5),
+            pos_hint={"center_x": 0.5, "center_y": 0.59}
+        ))
+
+        self.spinner = MDSpinner(
+            size_hint=(None, None),
+            size=(dp(26), dp(26)),
+            pos_hint={"center_x": .5, "center_y": .21},
+            active=True,
+            palette=[
+                [0.28627450980392155, 0.8431372549019608, 0.596078431372549, 1],
+                [0.3568627450980392, 0.3215686274509804, 0.8666666666666667, 1],
+                [0.8862745098039215, 0.36470588235294116, 0.592156862745098, 1],
+                [0.8784313725490196, 0.9058823529411765, 0.40784313725490196, 1],
+                [0.8862745098039215, 0.36470588235294116, 0.592156862745098, 1],
+                [0.3568627450980392, 0.3215686274509804, 0.8666666666666667, 1],
+                [0.28627450980392155, 0.8431372549019608, 0.596078431372549, 1],
+                [0.8784313725490196, 0.9058823529411765, 0.40784313725490196, 1]
+            ]
+)
+
+        self.add_widget(self.spinner)
+
+        self.add_widget(MDLabel(
+            text="Scanning...",
+            theme_text_color="Custom",  # Set the text color using a custom value
+            text_color=get_color_from_hex('ADD8E6'),
+            font_size="18sp",
+            pos_hint={"center_x": .89, "center_y": .164},
+            color="lightblue"
+        ))
 
     def on_enter(self, *args):
-        Clock.schedule_once(self.open_next_page, 2)
+        Clock.schedule_once(self.open_next_page, 3)
+
+    def on_back_button_press(self, *args):
+        self.manager.transition.direction = "right"  # Set the transition direction
+        self.manager.current = "home"
 
     def open_next_page(self, dt):
         self.manager.current = "patient"
@@ -113,9 +168,9 @@ class Slope(MDApp):
             # The Arduino object doesn't have an iter_read() method, so we don't need it
             # Just read the data directly from the serial port
             data = self.arduino.analog[0].read()
-            print(data)
-            if data == None:
-                self.root.current = "patient"
+            # print(data)
+            # if data is not None:
+            #   self.root.current = "patient"
 
 if __name__ == "__main__":
     Slope().run()
