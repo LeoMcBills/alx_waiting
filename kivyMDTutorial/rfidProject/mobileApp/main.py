@@ -17,7 +17,6 @@ from kivymd.uix.button import MDTextButton
 from kivymd.uix.spinner import MDSpinner
 from kivy.uix.image import Image
 
-
 Window.size = (310, 580)
 
 class Card(FakeRectangularElevationBehavior, MDFloatLayout):
@@ -72,7 +71,7 @@ class ScanPage(MDScreen):
         ))
 
     def on_enter(self, *args):
-        Clock.schedule_once(self.open_next_page, 3)
+        Clock.schedule_once(self.open_next_page, 2)
 
     def on_back_button_press(self, *args):
         self.manager.transition.direction = "right"  # Set the transition direction
@@ -139,7 +138,7 @@ class Slope(MDApp):
                         text="Cancel",
                         theme_text_color="Custom",
                         text_color=self.theme_cls.primary_color,
-                        on_release=self.close_dialog
+                        on_release=self.close_dialog,
                     ),
                 ],
             )
