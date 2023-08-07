@@ -138,7 +138,7 @@ class Slope(MDApp):
                         text="Cancel",
                         theme_text_color="Custom",
                         text_color=self.theme_cls.primary_color,
-                        on_release=self.close_dialog,
+                        on_release=self.close_dialog
                     ),
                 ],
             )
