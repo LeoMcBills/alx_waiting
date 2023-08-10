@@ -71,7 +71,7 @@ class ScanPage(MDScreen):
         ))
 
     def on_enter(self, *args):
-        Clock.schedule_once(self.open_next_page, 2)
+        Clock.schedule_once(self.open_next_page, 60)
 
     def on_back_button_press(self, *args):
         self.manager.transition.direction = "right"  # Set the transition direction
