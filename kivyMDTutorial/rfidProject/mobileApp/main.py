@@ -114,7 +114,7 @@ class Slope(MDApp):
     def show_alert_dialog(self):
         if not self.dialog:
             self.dialog = MDDialog(
-                text="NIRA API not configured. Please contact the administrator.",
+                #text="NIRA API not configured. Please contact the administrator.",
                 buttons=[
                     MDFlatButton(
                         text="DISCARD",
